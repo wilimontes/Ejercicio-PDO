@@ -56,9 +56,9 @@ while($tipo = $resultado->fetch()){
         rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" 
         crossorigin="anonymous">
 </head>
-<body>
-    <div class="container">
-        <h1>Editar Cliente</h1>
+<body style="background-color:#c0c0c0">
+    <div class="container" style="color:#8b0000">
+        <h1 class="text-center" style="color:#444c38">Editar Cliente</h1>
         <form method="POST">
             <div class= "mb-3">
                <label for="nombre" class= "form-label">Nombre:</label>
@@ -121,7 +121,7 @@ while($tipo = $resultado->fetch()){
                <textarea type="text" name="referencia" id="referencia" class="form-control" value="<?php echo $cliente['referencia']?>"></textarea>
             </div>
             <input type="submit" value="Grabar" class="btn btn-primary">
-            <a href="index.php" class="btn btn-danger">&#10149;</a>
+            <a href="index.php" style="margin-left: 1150px" class="btn btn-danger">Atras</a>
             
         </form>
     </div>

@@ -19,13 +19,17 @@ $resultado = $db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
     rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" 
     crossorigin="anonymous">
 </head>
-<body>
-<div class="container">
-        <h1>listado de cliente</h1>
-        <a href="nuevo_cliente.php" class="btn btn-secondary">Nuevo</a>
-        <table class="table">
+<body style="background-color:#c0c0c0">
+    <div class="container">
+        <br>
+        <h1 class="text-center" style="color:#444c38" ><abbr title="attribute">Listado de Cliente</abbr></h1>
+        <br>
+        <a href="nuevo_cliente.php" class="btn btn-success">Nuevo</a>
+        <br>
+        <br>
+        <table class="table table-bordered border-success">
             <thead>
-                <tr>
+                <tr class="text-center" style="color:#8b0000">
                     <th>Nombre</th>
                     <th>tipo cliente</th>
                     <th>tipo doc</th>
@@ -33,17 +37,17 @@ $resultado = $db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
                     <th>Acciones</th>
                 </tr>
             </thead> 
-            <tbody>
+            <tbody style="color:#191970">
             <?php
                 foreach($resultado as $cliente):
             ?>
-                <tr>
+                <tr class="text-center">
                         <td><?php echo $cliente['razon_social'] ?></td>
                         <td><?php echo $cliente['tipo_cliente'] ?></td>
                         <td><?php echo $cliente['tipo_documento'] ?></td>
                         <td><?php echo $cliente['numero_documento'] ?></td>
-                        <td>
-                            <a href="Editar_cliente.php?id=<?php echo $cliente['id'] ?>" class="btn btn-primary">Editar</a>
+                        <td class="text-center">
+                            <a href="Editar_cliente.php?id=<?php echo $cliente['id'] ?>" class="btn btn-warning">Editar</a>
                             <a href="Eliminar.php?id=<?php echo $cliente['id'] ?>" class="btn btn-danger">Eliminar</a>
                         </td>
                 </tr>       
@@ -52,6 +56,8 @@ $resultado = $db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
             ?>
             </tbody>
         </table>
-    </div>  
+    </div> 
+</div>
+    </body> 
 </body>
 </html>
